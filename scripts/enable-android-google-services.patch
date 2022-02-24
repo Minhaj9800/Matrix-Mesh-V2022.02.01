@@ -1,0 +1,103 @@
+diff --git a/android/app/build.gradle b/android/app/build.gradle
+index 39c920e8..e27a49f5 100644
+--- a/android/app/build.gradle
++++ b/android/app/build.gradle
+@@ -80,11 +80,11 @@ flutter {
+ 
+ dependencies {
+     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+-    //implementation 'com.google.firebase:firebase-messaging:19.0.1' // Workaround for https://github.com/microg/android_packages_apps_GmsCore/issues/313#issuecomment-617651698
++    implementation 'com.google.firebase:firebase-messaging:19.0.1' // Workaround for https://github.com/microg/android_packages_apps_GmsCore/issues/313#issuecomment-617651698
+     testImplementation 'junit:junit:4.12'
+     androidTestImplementation 'androidx.test:runner:1.1.1'
+     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+     implementation 'com.github.UnifiedPush:android-connector:1.2.3' // needed for unifiedpush
+ }
+ 
+-//apply plugin: 'com.google.gms.google-services'
++apply plugin: 'com.google.gms.google-services'
+diff --git a/android/app/src/main/AndroidManifest.xml b/android/app/src/main/AndroidManifest.xml
+index eae7eadf..cf81a750 100644
+--- a/android/app/src/main/AndroidManifest.xml
++++ b/android/app/src/main/AndroidManifest.xml
+@@ -88,12 +88,12 @@
+ 
+         </activity>
+ 
+-        <!-- <service android:name=".FcmPushService"
++        <service android:name=".FcmPushService"
+           android:exported="false">
+           <intent-filter>
+             <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+           </intent-filter>
+-        </service> -->
++        </service>
+ 
+         <receiver android:exported="true"  android:enabled="true"  android:name=".UnifiedPushReceiver">
+             <intent-filter>
+diff --git a/android/app/src/main/kotlin/chat/fluffy/fluffychat/FcmPushService.kt b/android/app/src/main/kotlin/chat/fluffy/fluffychat/FcmPushService.kt
+index d9930f55..510e9845 100644
+--- a/android/app/src/main/kotlin/chat/fluffy/fluffychat/FcmPushService.kt
++++ b/android/app/src/main/kotlin/chat/fluffy/fluffychat/FcmPushService.kt
+@@ -1,4 +1,4 @@
+-/*package chat.fluffy.fluffychat
++package chat.fluffy.fluffychat
+ 
+ import com.famedly.fcm_shared_isolate.FcmSharedIsolateService
+ 
+@@ -33,4 +33,3 @@ class FcmPushService : FcmSharedIsolateService() {
+         }
+     }
+ }
+-*/
+\ No newline at end of file
+diff --git a/android/build.gradle b/android/build.gradle
+index 4ce5c41d..be58d662 100644
+--- a/android/build.gradle
++++ b/android/build.gradle
+@@ -8,7 +8,7 @@ buildscript {
+     dependencies {
+         classpath 'com.android.tools.build:gradle:4.2.1'
+         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+-        //classpath 'com.google.gms:google-services:4.3.8'
++        classpath 'com.google.gms:google-services:4.3.8'
+     }
+ }
+ 
+diff --git a/lib/utils/background_push.dart b/lib/utils/background_push.dart
+index f2eb9fb4..0234765f 100644
+--- a/lib/utils/background_push.dart
++++ b/lib/utils/background_push.dart
+@@ -39,7 +39,7 @@ import 'famedlysdk_store.dart';
+ import 'matrix_sdk_extensions.dart/matrix_locals.dart';
+ import 'platform_infos.dart';
+ 
+-//import 'package:fcm_shared_isolate/fcm_shared_isolate.dart';
++import 'package:fcm_shared_isolate/fcm_shared_isolate.dart';
+ 
+ class NoTokenException implements Exception {
+   String get cause => 'Cannot get firebase token';
+@@ -117,7 +117,7 @@ class BackgroundPush {
+     setupPush();
+   }
+ 
+-  final dynamic _fcmSharedIsolate = null; //FcmSharedIsolate();
++  final dynamic _fcmSharedIsolate = FcmSharedIsolate();
+ 
+   StreamSubscription<LoginState>? onLogin;
+   StreamSubscription<SyncUpdate>? onRoomSync;
+diff --git a/pubspec.yaml b/pubspec.yaml
+index a1442ed2..ee0ce757 100644
+--- a/pubspec.yaml
++++ b/pubspec.yaml
+@@ -21,8 +21,8 @@ dependencies:
+   email_validator: ^2.0.1
+   emoji_picker_flutter: ^1.0.7
+   encrypt: ^5.0.1
+-  #fcm_shared_isolate:
+-  #  git: https://gitlab.com/famedly/libraries/fcm_shared_isolate.git
++  fcm_shared_isolate:
++    git: https://gitlab.com/famedly/libraries/fcm_shared_isolate.git
+   file_picker_cross: ^4.5.0
+   flutter:
+     sdk: flutter
