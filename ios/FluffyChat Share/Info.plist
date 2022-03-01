@@ -21,6 +21,19 @@
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>NSExtension</key>
+
+	<!--Adding permission for bluetooth and access location-->
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Need BLE permission</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Need BLE permission</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Need Location permission</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Need Location permission</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Need Location permission</string>
+	
 	<dict>
 		<key>NSExtensionAttributes</key>
 		<dict>
