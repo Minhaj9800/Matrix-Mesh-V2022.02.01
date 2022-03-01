@@ -25,6 +25,8 @@ import 'utils/platform_infos.dart';
 import 'widgets/lock_screen.dart';
 import 'widgets/matrix.dart';
 
+import 'package:flutter_blue/flutter_blue.dart';
+
 void main() async {
   // Our background push shared isolate accesses flutter-internal things very early in the startup proccess
   // To make sure that the parts of flutter needed are started up already, we need to ensure that the
@@ -69,7 +71,7 @@ class FluffyChatApp extends StatefulWidget {
   final List<Client> clients;
   final Map<String, String>? queryParameters;
 
-  const FluffyChatApp({
+  FluffyChatApp({
     Key? key,
     this.testWidget,
     required this.clients,
@@ -80,6 +82,16 @@ class FluffyChatApp extends StatefulWidget {
   /// opened multiple times for example if the user logs out after they logged
   /// in with qr code or magic link.
   static bool gotInitialLink = false;
+
+  //##### Bluetooth additions
+  //final String title; // Commented out as possibly unnecessary, comment back in if this causes an error
+  // Flutter Blue Instance to access the flutter_blue plug in from library
+  final FlutterBlue flutterBlue = FlutterBlue.instance;
+
+  // Scanning Bluetooth Device
+  // Initilaizing a list containing the Devices
+  final List<BluetoothDevice> devicesList = [];
+  //##### Bluetooth ends
 
   @override
   _FluffyChatAppState createState() => _FluffyChatAppState();
@@ -95,11 +107,41 @@ class _FluffyChatAppState extends State<FluffyChatApp> {
     super.initState();
     _initialUrl =
         widget.clients.any((client) => client.isLogged()) ? '/rooms' : '/home';
+		
+	//##### Bluetooth additions
+    widget.flutterBlue.connectedDevices
+        .asStream()
+        .listen((List<BluetoothDevice> devices) {
+      for (BluetoothDevice device in devices) {
+        _addDeviceTolist(device);
+      }
+    });
+    widget.flutterBlue.scanResults.listen((List<ScanResult> results) {
+      for (ScanResult result in results) {
+        _addDeviceTolist(result.device);
+      }
+    });
+    widget.flutterBlue.startScan();
+	//##### Bluetooth ends
   }
 
   @override
   Widget build(BuildContext context) {
     return AdaptiveTheme(
+	  // This Bluetooth code needs to run when this is built
+	  // *******************
+      //body: _buildListViewOfDevices(),
+	  // *******************
+	  // The body part likely is flexible (as in other parameters/names may work)
+	  // The objects below may accept the body parameter, or they may ignore it, or it may throw an error
+	  // You should check the api/documentation to see
+	  //    what the 'body:' parameter means/does in the Scaffold class that this code came from
+	  //    What parameters are available in this class and the classes below
+	  //      AdaptiveTheme, LayoutBuilder, VRouter
+	  //      It may even make sense to try to move it to Matrix once you are sure it is working
+	  
+	  
+
       light: FluffyThemes.light,
       dark: FluffyThemes.dark,
       initial: AdaptiveThemeMode.system,
@@ -162,4 +204,57 @@ class _FluffyChatAppState extends State<FluffyChatApp> {
       ),
     );
   }
+  
+  //##### Bluetooth additions
+  /*
+   * Helper method to fill the scanning bluetooth device lis
+   **/
+  _addDeviceTolist(final BluetoothDevice device) {
+    if (!widget.devicesList.contains(device)) {
+      setState(() {
+        widget.devicesList.add(device);
+      });
+    }
+  }
+
+  /// Building ListView with the deviceList as Content.
+  ListView _buildListViewOfDevices() {
+    List<Container> containers = [];
+    for (BluetoothDevice device in widget.devicesList) {
+      containers.add(
+        Container(
+          height: 50,
+          child: Row(
+            children: <Widget>[
+              Expanded(
+                child: Column(
+                  children: <Widget>[
+                    Text(device.name == '' ? '(unknown device)' : device.name),
+                    Text(device.id.toString()),
+                  ],
+                ),
+              ),
+              FlatButton(
+                color: Colors.blue,
+                child: Text(
+                  'Connect',
+                  style: TextStyle(color: Colors.white),
+                ),
+                onPressed: () {},
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
+    return ListView(
+      padding: const EdgeInsets.all(8),
+      children: <Widget>[
+        ...containers,
+      ],
+    );
+  }
+  //##### Bluetooth ends
+  
 }
