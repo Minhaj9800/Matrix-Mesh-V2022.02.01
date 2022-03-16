@@ -1,0 +1,158 @@
+This will generate a JSON format file containing all messages that 
+need to be translated.
+Launching lib/main.dart on Nokia 3 1 in debug mode...
+Warning: Mapping new ns http://schemas.android.com/repository/android/common/02 to old ns http://schemas.android.com/repository/android/common/01
+Warning: Mapping new ns http://schemas.android.com/repository/android/generic/02 to old ns http://schemas.android.com/repository/android/generic/01
+Warning: Mapping new ns http://schemas.android.com/sdk/android/repo/addon2/02 to old ns http://schemas.android.com/sdk/android/repo/addon2/01
+Warning: Mapping new ns http://schemas.android.com/sdk/android/repo/repository2/02 to old ns http://schemas.android.com/sdk/android/repo/repository2/01
+Warning: Mapping new ns http://schemas.android.com/sdk/android/repo/sys-img2/02 to old ns http://schemas.android.com/sdk/android/repo/sys-img2/01
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':flutter_olm:externalNativeBuildDebug'.
+> Build command failed.
+  Error while executing process /snap/flutter/current/usr/bin/ninja with arguments {-C /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/android/.cxx/cmake/debug/armeabi-v7a olm}
+  ninja: Entering directory `/home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/android/.cxx/cmake/debug/armeabi-v7a'
+  [1/23] Building CXX object CMakeFiles/olm.dir/src/base64.cpp.o
+  FAILED: CMakeFiles/olm.dir/src/base64.cpp.o 
+  /usr/lib/android-sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=armv7-none-linux-androideabi16 --gcc-toolchain=/usr/lib/android-sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/usr/lib/android-sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -DOLMLIB_VERSION_MAJOR=3 -DOLMLIB_VERSION_MINOR=2 -DOLMLIB_VERSION_PATCH=9 -Dolm_EXPORTS -I/home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/include -I/home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/lib -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC -fvisibility=hidden -fvisibility-inlines-hidden   -std=gnu++11 -MD -MT CMakeFiles/olm.dir/src/base64.cpp.o -MF CMakeFiles/olm.dir/src/base64.cpp.o.d -o CMakeFiles/olm.dir/src/base64.cpp.o -c /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/src/base64.cpp
+  In file included from /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/src/base64.cpp:15:
+  In file included from /snap/flutter/current/usr/include/c++/8/cassert:43:
+  In file included from /snap/flutter/current/usr/include/x86_64-linux-gnu/c++/8/bits/c++config.h:508:
+  In file included from /snap/flutter/current/usr/include/x86_64-linux-gnu/c++/8/bits/os_defines.h:39:
+  In file included from /snap/flutter/current/usr/include/features.h:448:
+  /snap/flutter/current/usr/include/x86_64-linux-gnu/gnu/stubs.h:7:11: fatal error: 'gnu/stubs-32.h' file not found
+  # include <gnu/stubs-32.h>
+            ^~~~~~~~~~~~~~~~
+  1 error generated.
+  [2/23] Building CXX object CMakeFiles/olm.dir/src/pickle.cpp.o
+  FAILED: CMakeFiles/olm.dir/src/pickle.cpp.o 
+  /usr/lib/android-sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=armv7-none-linux-androideabi16 --gcc-toolchain=/usr/lib/android-sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/usr/lib/android-sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -DOLMLIB_VERSION_MAJOR=3 -DOLMLIB_VERSION_MINOR=2 -DOLMLIB_VERSION_PATCH=9 -Dolm_EXPORTS -I/home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/include -I/home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/lib -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC -fvisibility=hidden -fvisibility-inlines-hidden   -std=gnu++11 -MD -MT CMakeFiles/olm.dir/src/pickle.cpp.o -MF CMakeFiles/olm.dir/src/pickle.cpp.o.d -o CMakeFiles/olm.dir/src/pickle.cpp.o -c /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/src/pickle.cpp
+  In file included from /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/src/pickle.cpp:15:
+  In file included from /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/include/olm/pickle.hh:18:
+  In file included from /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/include/olm/list.hh:18:
+  In file included from /snap/flutter/current/usr/include/c++/8/cstddef:49:
+  In file included from /snap/flutter/current/usr/include/x86_64-linux-gnu/c++/8/bits/c++config.h:508:
+  In file included from /snap/flutter/current/usr/include/x86_64-linux-gnu/c++/8/bits/os_defines.h:39:
+  In file included from /snap/flutter/current/usr/include/features.h:448:
+  /snap/flutter/current/usr/include/x86_64-linux-gnu/gnu/stubs.h:7:11: fatal error: 'gnu/stubs-32.h' file not found
+  # include <gnu/stubs-32.h>
+            ^~~~~~~~~~~~~~~~
+  1 error generated.
+  [3/23] Building CXX object CMakeFiles/olm.dir/src/utility.cpp.o
+  FAILED: CMakeFiles/olm.dir/src/utility.cpp.o 
+  /usr/lib/android-sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=armv7-none-linux-androideabi16 --gcc-toolchain=/usr/lib/android-sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/usr/lib/android-sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -DOLMLIB_VERSION_MAJOR=3 -DOLMLIB_VERSION_MINOR=2 -DOLMLIB_VERSION_PATCH=9 -Dolm_EXPORTS -I/home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/include -I/home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/lib -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC -fvisibility=hidden -fvisibility-inlines-hidden   -std=gnu++11 -MD -MT CMakeFiles/olm.dir/src/utility.cpp.o -MF CMakeFiles/olm.dir/src/utility.cpp.o.d -o CMakeFiles/olm.dir/src/utility.cpp.o -c /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/src/utility.cpp
+  In file included from /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/src/utility.cpp:16:
+  In file included from /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/include/olm/utility.hh:21:
+  In file included from /snap/flutter/current/usr/include/c++/8/cstddef:49:
+  In file included from /snap/flutter/current/usr/include/x86_64-linux-gnu/c++/8/bits/c++config.h:508:
+  In file included from /snap/flutter/current/usr/include/x86_64-linux-gnu/c++/8/bits/os_defines.h:39:
+  In file included from /snap/flutter/current/usr/include/features.h:448:
+  /snap/flutter/current/usr/include/x86_64-linux-gnu/gnu/stubs.h:7:11: fatal error: 'gnu/stubs-32.h' file not found
+  # include <gnu/stubs-32.h>
+            ^~~~~~~~~~~~~~~~
+  1 error generated.
+  [4/23] Building CXX object CMakeFiles/olm.dir/src/memory.cpp.o
+  FAILED: CMakeFiles/olm.dir/src/memory.cpp.o 
+  /usr/lib/android-sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=armv7-none-linux-androideabi16 --gcc-toolchain=/usr/lib/android-sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/usr/lib/android-sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -DOLMLIB_VERSION_MAJOR=3 -DOLMLIB_VERSION_MINOR=2 -DOLMLIB_VERSION_PATCH=9 -Dolm_EXPORTS -I/home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/include -I/home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/lib -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC -fvisibility=hidden -fvisibility-inlines-hidden   -std=gnu++11 -MD -MT CMakeFiles/olm.dir/src/memory.cpp.o -MF CMakeFiles/olm.dir/src/memory.cpp.o.d -o CMakeFiles/olm.dir/src/memory.cpp.o -c /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/src/memory.cpp
+  In file included from /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/src/memory.cpp:15:
+  In file included from /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/include/olm/memory.hh:15:
+  In file included from /snap/flutter/current/usr/include/c++/8/cstddef:49:
+  In file included from /snap/flutter/current/usr/include/x86_64-linux-gnu/c++/8/bits/c++config.h:508:
+  In file included from /snap/flutter/current/usr/include/x86_64-linux-gnu/c++/8/bits/os_defines.h:39:
+  In file included from /snap/flutter/current/usr/include/features.h:448:
+  /snap/flutter/current/usr/include/x86_64-linux-gnu/gnu/stubs.h:7:11: fatal error: 'gnu/stubs-32.h' file not found
+  # include <gnu/stubs-32.h>
+            ^~~~~~~~~~~~~~~~
+  1 error generated.
+  [5/23] Building CXX object CMakeFiles/olm.dir/src/crypto.cpp.o
+  FAILED: CMakeFiles/olm.dir/src/crypto.cpp.o 
+  /usr/lib/android-sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=armv7-none-linux-androideabi16 --gcc-toolchain=/usr/lib/android-sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/usr/lib/android-sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -DOLMLIB_VERSION_MAJOR=3 -DOLMLIB_VERSION_MINOR=2 -DOLMLIB_VERSION_PATCH=9 -Dolm_EXPORTS -I/home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/include -I/home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/lib -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC -fvisibility=hidden -fvisibility-inlines-hidden   -std=gnu++11 -MD -MT CMakeFiles/olm.dir/src/crypto.cpp.o -MF CMakeFiles/olm.dir/src/crypto.cpp.o.d -o CMakeFiles/olm.dir/src/crypto.cpp.o -c /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/src/crypto.cpp
+  In file included from /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/src/crypto.cpp:15:
+  In file included from /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/include/olm/crypto.h:27:
+  In file included from /snap/flutter/current/usr/include/stdint.h:26:
+  In file included from /snap/flutter/current/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33:
+  In file included from /snap/flutter/current/usr/include/features.h:448:
+  /snap/flutter/current/usr/include/x86_64-linux-gnu/gnu/stubs.h:7:11: fatal error: 'gnu/stubs-32.h' file not found
+  # include <gnu/stubs-32.h>
+            ^~~~~~~~~~~~~~~~
+  1 error generated.
+  [6/23] Building CXX object CMakeFiles/olm.dir/src/cipher.cpp.o
+  FAILED: CMakeFiles/olm.dir/src/cipher.cpp.o 
+  /usr/lib/android-sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=armv7-none-linux-androideabi16 --gcc-toolchain=/usr/lib/android-sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/usr/lib/android-sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -DOLMLIB_VERSION_MAJOR=3 -DOLMLIB_VERSION_MINOR=2 -DOLMLIB_VERSION_PATCH=9 -Dolm_EXPORTS -I/home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/include -I/home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/lib -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC -fvisibility=hidden -fvisibility-inlines-hidden   -std=gnu++11 -MD -MT CMakeFiles/olm.dir/src/cipher.cpp.o -MF CMakeFiles/olm.dir/src/cipher.cpp.o.d -o CMakeFiles/olm.dir/src/cipher.cpp.o -c /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/src/cipher.cpp
+  In file included from /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/src/cipher.cpp:15:
+  In file included from /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/include/olm/cipher.h:19:
+  In file included from /snap/flutter/current/usr/include/stdint.h:26:
+  In file included from /snap/flutter/current/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33:
+  In file included from /snap/flutter/current/usr/include/features.h:448:
+  /snap/flutter/current/usr/include/x86_64-linux-gnu/gnu/stubs.h:7:11: fatal error: 'gnu/stubs-32.h' file not found
+  # include <gnu/stubs-32.h>
+            ^~~~~~~~~~~~~~~~
+  1 error generated.
+  [7/23] Building CXX object CMakeFiles/olm.dir/src/ratchet.cpp.o
+  FAILED: CMakeFiles/olm.dir/src/ratchet.cpp.o 
+  /usr/lib/android-sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=armv7-none-linux-androideabi16 --gcc-toolchain=/usr/lib/android-sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/usr/lib/android-sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -DOLMLIB_VERSION_MAJOR=3 -DOLMLIB_VERSION_MINOR=2 -DOLMLIB_VERSION_PATCH=9 -Dolm_EXPORTS -I/home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/include -I/home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/lib -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC -fvisibility=hidden -fvisibility-inlines-hidden   -std=gnu++11 -MD -MT CMakeFiles/olm.dir/src/ratchet.cpp.o -MF CMakeFiles/olm.dir/src/ratchet.cpp.o.d -o CMakeFiles/olm.dir/src/ratchet.cpp.o -c /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/src/ratchet.cpp
+  In file included from /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/src/ratchet.cpp:15:
+  In file included from /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/include/olm/ratchet.hh:16:
+  In file included from /snap/flutter/current/usr/include/c++/8/cstdint:38:
+  In file included from /snap/flutter/current/usr/include/x86_64-linux-gnu/c++/8/bits/c++config.h:508:
+  In file included from /snap/flutter/current/usr/include/x86_64-linux-gnu/c++/8/bits/os_defines.h:39:
+  In file included from /snap/flutter/current/usr/include/features.h:448:
+  /snap/flutter/current/usr/include/x86_64-linux-gnu/gnu/stubs.h:7:11: fatal error: 'gnu/stubs-32.h' file not found
+  # include <gnu/stubs-32.h>
+            ^~~~~~~~~~~~~~~~
+  1 error generated.
+  [8/23] Building CXX object CMakeFiles/olm.dir/src/message.cpp.o
+  FAILED: CMakeFiles/olm.dir/src/message.cpp.o 
+  /usr/lib/android-sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=armv7-none-linux-androideabi16 --gcc-toolchain=/usr/lib/android-sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/usr/lib/android-sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -DOLMLIB_VERSION_MAJOR=3 -DOLMLIB_VERSION_MINOR=2 -DOLMLIB_VERSION_PATCH=9 -Dolm_EXPORTS -I/home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/include -I/home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/lib -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC -fvisibility=hidden -fvisibility-inlines-hidden   -std=gnu++11 -MD -MT CMakeFiles/olm.dir/src/message.cpp.o -MF CMakeFiles/olm.dir/src/message.cpp.o.d -o CMakeFiles/olm.dir/src/message.cpp.o -c /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/src/message.cpp
+  In file included from /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/src/message.cpp:15:
+  In file included from /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/include/olm/message.hh:25:
+  In file included from /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/include/olm/message.h:27:
+  In file included from /snap/flutter/current/usr/include/stdint.h:26:
+  In file included from /snap/flutter/current/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33:
+  In file included from /snap/flutter/current/usr/include/features.h:448:
+  /snap/flutter/current/usr/include/x86_64-linux-gnu/gnu/stubs.h:7:11: fatal error: 'gnu/stubs-32.h' file not found
+  # include <gnu/stubs-32.h>
+            ^~~~~~~~~~~~~~~~
+  1 error generated.
+  [9/23] Building CXX object CMakeFiles/olm.dir/src/account.cpp.o
+  FAILED: CMakeFiles/olm.dir/src/account.cpp.o 
+  /usr/lib/android-sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=armv7-none-linux-androideabi16 --gcc-toolchain=/usr/lib/android-sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/usr/lib/android-sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -DOLMLIB_VERSION_MAJOR=3 -DOLMLIB_VERSION_MINOR=2 -DOLMLIB_VERSION_PATCH=9 -Dolm_EXPORTS -I/home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/include -I/home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/lib -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC -fvisibility=hidden -fvisibility-inlines-hidden   -std=gnu++11 -MD -MT CMakeFiles/olm.dir/src/account.cpp.o -MF CMakeFiles/olm.dir/src/account.cpp.o.d -o CMakeFiles/olm.dir/src/account.cpp.o -c /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/src/account.cpp
+  In file included from /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/src/account.cpp:15:
+  In file included from /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/include/olm/account.hh:18:
+  In file included from /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/include/olm/list.hh:18:
+  In file included from /snap/flutter/current/usr/include/c++/8/cstddef:49:
+  In file included from /snap/flutter/current/usr/include/x86_64-linux-gnu/c++/8/bits/c++config.h:508:
+  In file included from /snap/flutter/current/usr/include/x86_64-linux-gnu/c++/8/bits/os_defines.h:39:
+  In file included from /snap/flutter/current/usr/include/features.h:448:
+  /snap/flutter/current/usr/include/x86_64-linux-gnu/gnu/stubs.h:7:11: fatal error: 'gnu/stubs-32.h' file not found
+  # include <gnu/stubs-32.h>
+            ^~~~~~~~~~~~~~~~
+  1 error generated.
+  [10/23] Building CXX object CMakeFiles/olm.dir/src/session.cpp.o
+  FAILED: CMakeFiles/olm.dir/src/session.cpp.o 
+  /usr/lib/android-sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=armv7-none-linux-androideabi16 --gcc-toolchain=/usr/lib/android-sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/usr/lib/android-sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -DOLMLIB_VERSION_MAJOR=3 -DOLMLIB_VERSION_MINOR=2 -DOLMLIB_VERSION_PATCH=9 -Dolm_EXPORTS -I/home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/include -I/home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/lib -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC -fvisibility=hidden -fvisibility-inlines-hidden   -std=gnu++11 -MD -MT CMakeFiles/olm.dir/src/session.cpp.o -MF CMakeFiles/olm.dir/src/session.cpp.o.d -o CMakeFiles/olm.dir/src/session.cpp.o -c /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/src/session.cpp
+  In file included from /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/src/session.cpp:15:
+  In file included from /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/include/olm/session.hh:18:
+  In file included from /home/minhaj/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_olm-1.2.0/ios/include/olm/ratchet.hh:16:
+  In file included from /snap/flutter/current/usr/include/c++/8/cstdint:38:
+  In file included from /snap/flutter/current/usr/include/x86_64-linux-gnu/c++/8/bits/c++config.h:508:
+  In file included from /snap/flutter/current/usr/include/x86_64-linux-gnu/c++/8/bits/os_defines.h:39:
+  In file included from /snap/flutter/current/usr/include/features.h:448:
+  /snap/flutter/current/usr/include/x86_64-linux-gnu/gnu/stubs.h:7:11: fatal error: 'gnu/stubs-32.h' file not found
+  # include <gnu/stubs-32.h>
+            ^~~~~~~~~~~~~~~~
+  1 error generated.
+  ninja: build stopped: subcommand failed.
+
+
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 13s
+Running Gradle task 'assembleDebug'...                             14.0s
+Exception: Gradle task assembleDebug failed with exit code 1

@@ -94,7 +94,7 @@ class ChatView extends StatelessWidget {
                   children: [
                     const Icon(
                       Icons.shield_outlined,
-                      color: Colors.red,
+                      color: Colors.green,
                     ),
                     const SizedBox(width: 12),
                     Text(L10n.of(context)!.reportMessage),
