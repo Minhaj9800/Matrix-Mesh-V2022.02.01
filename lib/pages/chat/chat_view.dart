@@ -28,6 +28,8 @@ import '../../utils/stream_extension.dart';
 import 'chat_emoji_picker.dart';
 import 'chat_input_row.dart';
 import 'events/message.dart';
+//importing bluetooth functionality Class
+import 'package:fluffychat/pages/Bluetooth/bluetooth.dart';
 
 enum _EventContextAction { info, report }
 
@@ -46,10 +48,22 @@ class ChatView extends StatelessWidget {
             onPressed: controller.editSelectedEventAction,
           ),
         IconButton(
-          icon: const Icon(Icons.copy_outlined),
-          tooltip: L10n.of(context)!.copy,
-          onPressed: controller.copyEventsAction,
-        ),
+            icon: const Icon(Icons.copy_outlined),
+            tooltip: L10n.of(context)!.copy,
+            onPressed: controller.copyEventsAction,
+            // Adding the button for navigation to bluetooth routes
+           ),
+            IconButton(
+            icon: const Icon(Icons.copy_outlined),
+            tooltip: L10n.of(context)!.copy,
+            // Adding the button for navigation to bluetooth routes
+            onPressed: () {
+              Navigator.push(
+                context,MaterialPageRoute(builder:(context)=> BluetoothApp())
+              );
+            }),
+
+            
         if (controller.canSaveSelectedEvent)
           IconButton(
             icon: Icon(Icons.adaptive.share),

@@ -9,6 +9,7 @@ import 'package:fluffychat/utils/platform_infos.dart';
 import '../../config/app_config.dart';
 import '../../widgets/content_banner.dart';
 import 'settings.dart';
+import 'package:fluffychat/pages/Bluetooth/bluetooth.dart';
 
 class SettingsView extends StatelessWidget {
   final SettingsController controller;
@@ -55,6 +56,14 @@ class SettingsView extends StatelessWidget {
                 leading: const Icon(Icons.devices_outlined),
                 title: Text(L10n.of(context)!.devices),
                 onTap: () => VRouter.of(context).to('/settings/devices'),
+              ),
+              ListTile(
+                leading: const Icon(Icons.devices_outlined),
+                title: Text(L10n.of(context)!.devices),
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => BluetoothApp()));
+                },
               ),
               ListTile(
                 leading: const Icon(Icons.chat_bubble_outline_outlined),
