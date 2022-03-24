@@ -5,7 +5,7 @@
  </p>
 
 
-FluffyChat is an open source, nonprofit and cute matrix messenger app. The app is easy to use but secure and decentralized.
+
 
 ## Features
 
