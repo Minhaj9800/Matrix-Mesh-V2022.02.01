@@ -1,0 +1,339 @@
+lib/src/matrix_api.dart:      throw MatrixException.fromJson(json.decode(utf8.decode(responseBody)));
+lib/src/matrix_api.dart:    final data = PusherData.fromJson(pusher.toJson()).toJson();
+lib/src/matrix_api.dart:    return TurnServerCredentials.fromJson(json);
+lib/src/model/sync_update.dart:  SyncUpdate.fromJson(Map<String, dynamic> json)
+lib/src/model/sync_update.dart:            json['rooms'] != null ? RoomsUpdate.fromJson(json['rooms']) : null,
+lib/src/model/sync_update.dart:                    .map((i) => Presence.fromJson(i))
+lib/src/model/sync_update.dart:                .map((i) => BasicEvent.fromJson(i))
+lib/src/model/sync_update.dart:                    .map((i) => BasicEventWithSender.fromJson(i))
+lib/src/model/sync_update.dart:            ? DeviceListsUpdate.fromJson(json['device_lists'])
+lib/src/model/sync_update.dart:  RoomsUpdate.fromJson(Map<String, dynamic> json) {
+lib/src/model/sync_update.dart:            .map((k, v) => MapEntry(k, JoinedRoomUpdate.fromJson(v)))
+lib/src/model/sync_update.dart:            .map((k, v) => MapEntry(k, InvitedRoomUpdate.fromJson(v)))
+lib/src/model/sync_update.dart:            .map((k, v) => MapEntry(k, LeftRoomUpdate.fromJson(v)))
+lib/src/model/sync_update.dart:  JoinedRoomUpdate.fromJson(Map<String, dynamic> json) {
+lib/src/model/sync_update.dart:        json['summary'] != null ? RoomSummary.fromJson(json['summary']) : null;
+lib/src/model/sync_update.dart:            .map((i) => MatrixEvent.fromJson(i))
+lib/src/model/sync_update.dart:        ? TimelineUpdate.fromJson(json['timeline'])
+lib/src/model/sync_update.dart:                .map((i) => BasicRoomEvent.fromJson(i))
+lib/src/model/sync_update.dart:                .map((i) => BasicRoomEvent.fromJson(i))
+lib/src/model/sync_update.dart:        ? UnreadNotificationCounts.fromJson(json['unread_notifications'])
+lib/src/model/sync_update.dart:  InvitedRoomUpdate.fromJson(Map<String, dynamic> json) {
+lib/src/model/sync_update.dart:                .map((i) => StrippedStateEvent.fromJson(i))
+lib/src/model/sync_update.dart:  LeftRoomUpdate.fromJson(Map<String, dynamic> json) {
+lib/src/model/sync_update.dart:            .map((i) => MatrixEvent.fromJson(i))
+lib/src/model/sync_update.dart:        ? TimelineUpdate.fromJson(json['timeline'])
+lib/src/model/sync_update.dart:                .map((i) => BasicRoomEvent.fromJson(i))
+lib/src/model/sync_update.dart:  TimelineUpdate.fromJson(Map<String, dynamic> json) {
+lib/src/model/sync_update.dart:        ? (json['events'] as List).map((i) => MatrixEvent.fromJson(i)).toList()
+lib/src/model/sync_update.dart:  UnreadNotificationCounts.fromJson(Map<String, dynamic> json) {
+lib/src/model/sync_update.dart:  DeviceListsUpdate.fromJson(Map<String, dynamic> json) {
+lib/src/model/stripped_state_event.dart:  StrippedStateEvent.fromJson(Map<String, dynamic> json)
+lib/src/model/stripped_state_event.dart:        super.fromJson(json);
+lib/src/model/matrix_event.dart:  MatrixEvent.fromJson(Map<String, dynamic> json)
+lib/src/model/matrix_event.dart:        super.fromJson(json);
+lib/src/model/presence_content.dart:  PresenceContent.fromJson(Map<String, dynamic> json)
+lib/src/model/matrix_keys.dart:  MatrixSignableKey.fromJson(Map<String, dynamic> json)
+lib/src/model/matrix_keys.dart:  MatrixCrossSigningKey.fromJson(Map<String, dynamic> json)
+lib/src/model/matrix_keys.dart:        super.fromJson(json);
+lib/src/model/matrix_keys.dart:  MatrixDeviceKeys.fromJson(Map<String, dynamic> json)
+lib/src/model/matrix_keys.dart:        super.fromJson(json);
+lib/src/model/room_keys_keys.dart:  RoomKeysSingleKey.fromJson(Map<String, dynamic> json)
+lib/src/model/room_keys_keys.dart:  RoomKeysRoom.fromJson(Map<String, dynamic> json)
+lib/src/model/room_keys_keys.dart:            .map((k, v) => MapEntry(k, RoomKeysSingleKey.fromJson(v)));
+lib/src/model/room_keys_keys.dart:  RoomKeysUpdateResponse.fromJson(Map<String, dynamic> json)
+lib/src/model/basic_event.dart:  BasicEvent.fromJson(Map<String, dynamic> json)
+lib/src/model/room_summary.dart:  RoomSummary.fromJson(Map<String, dynamic> json)
+lib/src/model/presence.dart:  Presence.fromJson(Map<String, dynamic> json)
+lib/src/model/presence.dart:      : presence = PresenceContent.fromJson(json['content']),
+lib/src/model/presence.dart:        super.fromJson(json);
+lib/src/model/matrix_exception.dart:  MatrixException.fromJson(Map<String, dynamic> content) : raw = content;
+lib/src/model/events/image_pack_content.dart:      ImagePackContent.fromJson(content);
+lib/src/model/events/image_pack_content.dart:  ImagePackContent.fromJson(Map<String, dynamic> json)
+lib/src/model/events/image_pack_content.dart:        pack = ImagePackPackContent.fromJson(
+lib/src/model/events/image_pack_content.dart:                (k, v) => MapEntry(k, ImagePackImageContent.fromJson(v))) ??
+lib/src/model/events/image_pack_content.dart:                    ImagePackImageContent.fromJson(v))) ??
+lib/src/model/events/image_pack_content.dart:  ImagePackImageContent.fromJson(Map<String, dynamic> json)
+lib/src/model/events/image_pack_content.dart:  ImagePackPackContent.fromJson(Map<String, dynamic> json)
+lib/src/model/events/room_key_request_content.dart:      RoomKeyRequestContent.fromJson(content);
+lib/src/model/events/room_key_request_content.dart:  RoomKeyRequestContent.fromJson(Map<String, dynamic> json)
+lib/src/model/events/room_key_request_content.dart:      : body = ((x) => x != null ? RequestedKeyInfo.fromJson(x) : null)(
+lib/src/model/events/room_key_request_content.dart:  RequestedKeyInfo.fromJson(Map<String, dynamic> json)
+lib/src/model/events/tombstone_content.dart:      TombstoneContent.fromJson(content);
+lib/src/model/events/tombstone_content.dart:  TombstoneContent.fromJson(Map<String, dynamic> json)
+lib/src/model/events/olm_plaintext_payload.dart:  factory OlmPlaintextPayload.fromJson(Map<String, dynamic> json) =>
+lib/src/model/events/forwarded_room_key_content.dart:      ForwardedRoomKeyContent.fromJson(content);
+lib/src/model/events/forwarded_room_key_content.dart:  ForwardedRoomKeyContent.fromJson(Map<String, dynamic> json)
+lib/src/model/events/forwarded_room_key_content.dart:        super.fromJson(json);
+lib/src/model/events/room_encryption_content.dart:      RoomEncryptionContent.fromJson(content);
+lib/src/model/events/room_encryption_content.dart:  RoomEncryptionContent.fromJson(Map<String, dynamic> json)
+lib/src/model/events/room_encrypted_content.dart:      RoomEncryptedContent.fromJson(content);
+lib/src/model/events/room_encrypted_content.dart:  RoomEncryptedContent.fromJson(Map<String, dynamic> json)
+lib/src/model/events/room_encrypted_content.dart:            ?.catchMap((k, v) => MapEntry(k, CiphertextInfo.fromJson(v)));
+lib/src/model/events/room_encrypted_content.dart:  CiphertextInfo.fromJson(Map<String, dynamic> json)
+lib/src/model/events/secret_storage_default_key_content.dart:      SecretStorageDefaultKeyContent.fromJson(content);
+lib/src/model/events/secret_storage_default_key_content.dart:  SecretStorageDefaultKeyContent.fromJson(Map<String, dynamic> json)
+lib/src/model/events/room_key_content.dart:  RoomKeyContent get parsedRoomKeyContent => RoomKeyContent.fromJson(content);
+lib/src/model/events/room_key_content.dart:  RoomKeyContent.fromJson(Map<String, dynamic> json)
+lib/src/model/events/secret_storage_key_content.dart:      SecretStorageKeyContent.fromJson(content);
+lib/src/model/events/secret_storage_key_content.dart:  SecretStorageKeyContent.fromJson(Map<String, dynamic> json)
+lib/src/model/events/secret_storage_key_content.dart:      : passphrase = ((x) => x != null ? PassphraseInfo.fromJson(x) : null)(
+lib/src/model/events/secret_storage_key_content.dart:  PassphraseInfo.fromJson(Map<String, dynamic> json)
+lib/src/model/auth/authentication_recaptcha.dart:  AuthenticationRecaptcha.fromJson(Map<String, dynamic> json)
+lib/src/model/auth/authentication_recaptcha.dart:        super.fromJson(json);
+lib/src/model/auth/authentication_third_party_identifier.dart:  AuthenticationThirdPartyIdentifier.fromJson(Map<String, dynamic> json)
+lib/src/model/auth/authentication_third_party_identifier.dart:        super.fromJson(json);
+lib/src/model/auth/authentication_user_identifier.dart:  AuthenticationUserIdentifier.fromJson(Map<String, dynamic> json)
+lib/src/model/auth/authentication_user_identifier.dart:        super.fromJson(json);
+lib/src/model/auth/authentication_three_pid_creds.dart:  AuthenticationThreePidCreds.fromJson(Map<String, dynamic> json)
+lib/src/model/auth/authentication_three_pid_creds.dart:      : super.fromJson(json) {
+lib/src/model/auth/authentication_three_pid_creds.dart:      threepidCreds = ThreepidCreds.fromJson(creds);
+lib/src/model/auth/authentication_three_pid_creds.dart:  ThreepidCreds.fromJson(Map<String, dynamic> json)
+lib/src/model/auth/authentication_token.dart:  AuthenticationToken.fromJson(Map<String, dynamic> json)
+lib/src/model/auth/authentication_token.dart:        super.fromJson(json);
+lib/src/model/auth/authentication_phone_identifier.dart:  AuthenticationPhoneIdentifier.fromJson(Map<String, dynamic> json)
+lib/src/model/auth/authentication_phone_identifier.dart:        super.fromJson(json);
+lib/src/model/auth/authentication_identifier.dart:  AuthenticationIdentifier.fromJson(Map<String, dynamic> json)
+lib/src/model/auth/authentication_identifier.dart:        return AuthenticationUserIdentifier.fromJson(json);
+lib/src/model/auth/authentication_identifier.dart:        return AuthenticationPhoneIdentifier.fromJson(json);
+lib/src/model/auth/authentication_identifier.dart:        return AuthenticationThirdPartyIdentifier.fromJson(json);
+lib/src/model/auth/authentication_identifier.dart:        return AuthenticationIdentifier.fromJson(json);
+lib/src/model/auth/authentication_data.dart:  AuthenticationData.fromJson(Map<String, dynamic> json)
+lib/src/model/auth/authentication_password.dart:  AuthenticationPassword.fromJson(Map<String, dynamic> json)
+lib/src/model/auth/authentication_password.dart:        super.fromJson(json);
+lib/src/model/basic_room_event.dart:  BasicRoomEvent.fromJson(Map<String, dynamic> json)
+lib/src/model/basic_room_event.dart:        super.fromJson(json);
+lib/src/model/basic_event_with_sender.dart:  BasicEventWithSender.fromJson(Map<String, dynamic> json)
+lib/src/model/basic_event_with_sender.dart:        super.fromJson(json);
+lib/src/generated/api.dart:    return DiscoveryInformation.fromJson(json);
+lib/src/generated/api.dart:        ? (v as List).map((v) => ThirdPartyIdentifier.fromJson(v)).toList()
+lib/src/generated/api.dart:    return RequestTokenResponse.fromJson(json);
+lib/src/generated/api.dart:    return RequestTokenResponse.fromJson(json);
+lib/src/generated/api.dart:    return RequestTokenResponse.fromJson(json);
+lib/src/generated/api.dart:    return RequestTokenResponse.fromJson(json);
+lib/src/generated/api.dart:    return TokenOwnerInfo.fromJson(json);
+lib/src/generated/api.dart:    return WhoIsInfo.fromJson(json);
+lib/src/generated/api.dart:    return Capabilities.fromJson(json['capabilities']);
+lib/src/generated/api.dart:        ? (v as List).map((v) => Device.fromJson(v)).toList()
+lib/src/generated/api.dart:    return Device.fromJson(json);
+lib/src/generated/api.dart:    return GetRoomIdByAliasResponse.fromJson(json);
+lib/src/generated/api.dart:    return EventsSyncUpdate.fromJson(json);
+lib/src/generated/api.dart:    return EventsSyncUpdate.fromJson(json);
+lib/src/generated/api.dart:    return MatrixEvent.fromJson(json);
+lib/src/generated/api.dart:    return GetKeysChangesResponse.fromJson(json);
+lib/src/generated/api.dart:    return ClaimKeysResponse.fromJson(json);
+lib/src/generated/api.dart:    return QueryKeysResponse.fromJson(json);
+lib/src/generated/api.dart:        ? (v as List).map((v) => LoginFlow.fromJson(v)).toList()
+lib/src/generated/api.dart:    return LoginResponse.fromJson(json);
+lib/src/generated/api.dart:    return GetNotificationsResponse.fromJson(json);
+lib/src/generated/api.dart:    return GetPresenceResponse.fromJson(json);
+lib/src/generated/api.dart:    return ProfileInformation.fromJson(json);
+lib/src/generated/api.dart:    return GetPublicRoomsResponse.fromJson(json);
+lib/src/generated/api.dart:    return QueryPublicRoomsResponse.fromJson(json);
+lib/src/generated/api.dart:        ? (v as List).map((v) => Pusher.fromJson(v)).toList()
+lib/src/generated/api.dart:    return PushRuleSet.fromJson(json['global']);
+lib/src/generated/api.dart:    return PushRule.fromJson(json);
+lib/src/generated/api.dart:    return RegisterResponse.fromJson(json);
+lib/src/generated/api.dart:    return RequestTokenResponse.fromJson(json);
+lib/src/generated/api.dart:    return RequestTokenResponse.fromJson(json);
+lib/src/generated/api.dart:    return RoomKeysUpdateResponse.fromJson(json);
+lib/src/generated/api.dart:    return RoomKeys.fromJson(json);
+lib/src/generated/api.dart:    return RoomKeysUpdateResponse.fromJson(json);
+lib/src/generated/api.dart:    return RoomKeysUpdateResponse.fromJson(json);
+lib/src/generated/api.dart:    return RoomKeyBackup.fromJson(json);
+lib/src/generated/api.dart:    return RoomKeysUpdateResponse.fromJson(json);
+lib/src/generated/api.dart:    return RoomKeysUpdateResponse.fromJson(json);
+lib/src/generated/api.dart:    return KeyBackupData.fromJson(json);
+lib/src/generated/api.dart:    return RoomKeysUpdateResponse.fromJson(json);
+lib/src/generated/api.dart:    return GetRoomKeysVersionCurrentResponse.fromJson(json);
+lib/src/generated/api.dart:    return GetRoomKeysVersionResponse.fromJson(json);
+lib/src/generated/api.dart:    return EventContext.fromJson(json);
+lib/src/generated/api.dart:    return MatrixEvent.fromJson(json);
+lib/src/generated/api.dart:            .map((k, v) => MapEntry(k, RoomMember.fromJson(v)))
+lib/src/generated/api.dart:        ? (v as List).map((v) => MatrixEvent.fromJson(v)).toList()
+lib/src/generated/api.dart:    return GetRoomEventsResponse.fromJson(json);
+lib/src/generated/api.dart:    return (json as List).map((v) => MatrixEvent.fromJson(v)).toList();
+lib/src/generated/api.dart:    return SearchResults.fromJson(json);
+lib/src/generated/api.dart:    return SyncUpdate.fromJson(json);
+lib/src/generated/api.dart:    return (json as List).map((v) => Location.fromJson(v)).toList();
+lib/src/generated/api.dart:    return (json as List).map((v) => Location.fromJson(v)).toList();
+lib/src/generated/api.dart:    return Protocol.fromJson(json);
+lib/src/generated/api.dart:        .map((k, v) => MapEntry(k, Protocol.fromJson(v)));
+lib/src/generated/api.dart:    return (json as List).map((v) => ThirdPartyUser.fromJson(v)).toList();
+lib/src/generated/api.dart:    return (json as List).map((v) => ThirdPartyUser.fromJson(v)).toList();
+lib/src/generated/api.dart:    return Filter.fromJson(json);
+lib/src/generated/api.dart:    return OpenIdCredentials.fromJson(json);
+lib/src/generated/api.dart:            .map((k, v) => MapEntry(k, Tag.fromJson(v)))
+lib/src/generated/api.dart:    return SearchUserDirectoryResponse.fromJson(json);
+lib/src/generated/api.dart:    return TurnServerCredentials.fromJson(json);
+lib/src/generated/api.dart:    return GetVersionsResponse.fromJson(json);
+lib/src/generated/api.dart:    return ServerConfig.fromJson(json);
+lib/src/generated/api.dart:    return GetUrlPreviewResponse.fromJson(json);
+lib/src/generated/model.dart:  HomeserverInformation.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  IdentityServerInformation.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  DiscoveryInformation.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:      : mHomeserver = HomeserverInformation.fromJson(json['m.homeserver']),
+lib/src/generated/model.dart:            ? IdentityServerInformation.fromJson(v)
+lib/src/generated/model.dart:  ThirdPartyIdentifier.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  ThreePidCredentials.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  RequestTokenResponse.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  TokenOwnerInfo.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  ConnectionInfo.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  SessionInfo.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:            ? (v as List).map((v) => ConnectionInfo.fromJson(v)).toList()
+lib/src/generated/model.dart:  DeviceInfo.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:            ? (v as List).map((v) => SessionInfo.fromJson(v)).toList()
+lib/src/generated/model.dart:  WhoIsInfo.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:                .map((k, v) => MapEntry(k, DeviceInfo.fromJson(v)))
+lib/src/generated/model.dart:  ChangePasswordCapability.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  RoomVersionsCapability.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  Capabilities.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:            ? ChangePasswordCapability.fromJson(v)
+lib/src/generated/model.dart:            ? RoomVersionsCapability.fromJson(v)
+lib/src/generated/model.dart:  StateEvent.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  Invite3pid.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  Device.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  GetRoomIdByAliasResponse.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  EventsSyncUpdate.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:            ? (v as List).map((v) => MatrixEvent.fromJson(v)).toList()
+lib/src/generated/model.dart:  ThirdPartySigned.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  GetKeysChangesResponse.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  ClaimKeysResponse.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  QueryKeysResponse.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:                    .map((k, v) => MapEntry(k, MatrixDeviceKeys.fromJson(v)))))
+lib/src/generated/model.dart:                .map((k, v) => MapEntry(k, MatrixCrossSigningKey.fromJson(v)))
+lib/src/generated/model.dart:                .map((k, v) => MapEntry(k, MatrixCrossSigningKey.fromJson(v)))
+lib/src/generated/model.dart:                .map((k, v) => MapEntry(k, MatrixCrossSigningKey.fromJson(v)))
+lib/src/generated/model.dart:  LoginFlow.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  LoginResponse.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:            ? DiscoveryInformation.fromJson(v)
+lib/src/generated/model.dart:  Notification.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:        event = MatrixEvent.fromJson(json['event']),
+lib/src/generated/model.dart:  GetNotificationsResponse.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:            .map((v) => Notification.fromJson(v))
+lib/src/generated/model.dart:  GetPresenceResponse.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  ProfileInformation.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  PublicRoomsChunk.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  GetPublicRoomsResponse.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:            .map((v) => PublicRoomsChunk.fromJson(v))
+lib/src/generated/model.dart:  PublicRoomQueryFilter.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  QueryPublicRoomsResponse.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:            .map((v) => PublicRoomsChunk.fromJson(v))
+lib/src/generated/model.dart:  PusherData.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  PusherId.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  Pusher.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:        data = PusherData.fromJson(json['data']),
+lib/src/generated/model.dart:  PushCondition.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  PushRule.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:            ? (v as List).map((v) => PushCondition.fromJson(v)).toList()
+lib/src/generated/model.dart:  PushRuleSet.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:            ? (v as List).map((v) => PushRule.fromJson(v)).toList()
+lib/src/generated/model.dart:            ? (v as List).map((v) => PushRule.fromJson(v)).toList()
+lib/src/generated/model.dart:            ? (v as List).map((v) => PushRule.fromJson(v)).toList()
+lib/src/generated/model.dart:            ? (v as List).map((v) => PushRule.fromJson(v)).toList()
+lib/src/generated/model.dart:            ? (v as List).map((v) => PushRule.fromJson(v)).toList()
+lib/src/generated/model.dart:  RegisterResponse.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  RoomKeysUpdateResponse.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  KeyBackupData.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  RoomKeyBackup.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:            .map((k, v) => MapEntry(k, KeyBackupData.fromJson(v)));
+lib/src/generated/model.dart:  RoomKeys.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:            .map((k, v) => MapEntry(k, RoomKeyBackup.fromJson(v)));
+lib/src/generated/model.dart:  GetRoomKeysVersionCurrentResponse.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  GetRoomKeysVersionResponse.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  EventContext.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:            ((v) => v != null ? MatrixEvent.fromJson(v) : null)(json['event']),
+lib/src/generated/model.dart:            ? (v as List).map((v) => MatrixEvent.fromJson(v)).toList()
+lib/src/generated/model.dart:            ? (v as List).map((v) => MatrixEvent.fromJson(v)).toList()
+lib/src/generated/model.dart:            ? (v as List).map((v) => MatrixEvent.fromJson(v)).toList()
+lib/src/generated/model.dart:  RoomMember.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  GetRoomEventsResponse.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:            ? (v as List).map((v) => MatrixEvent.fromJson(v)).toList()
+lib/src/generated/model.dart:            ? (v as List).map((v) => MatrixEvent.fromJson(v)).toList()
+lib/src/generated/model.dart:  IncludeEventContext.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  EventFilter.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  RoomEventFilter.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  SearchFilter.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  Group.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  Groupings.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:            ? (v as List).map((v) => Group.fromJson(v)).toList()
+lib/src/generated/model.dart:  RoomEventsCriteria.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:            ? IncludeEventContext.fromJson(v)
+lib/src/generated/model.dart:            v != null ? SearchFilter.fromJson(v) : null)(json['filter']),
+lib/src/generated/model.dart:            v != null ? Groupings.fromJson(v) : null)(json['groupings']),
+lib/src/generated/model.dart:  Categories.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:      : roomEvents = ((v) => v != null ? RoomEventsCriteria.fromJson(v) : null)(
+lib/src/generated/model.dart:  GroupValue.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  UserProfile.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  SearchResultsEventContext.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:            ? (v as List).map((v) => MatrixEvent.fromJson(v)).toList()
+lib/src/generated/model.dart:            ? (v as List).map((v) => MatrixEvent.fromJson(v)).toList()
+lib/src/generated/model.dart:                .map((k, v) => MapEntry(k, UserProfile.fromJson(v)))
+lib/src/generated/model.dart:  Result.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:            ? SearchResultsEventContext.fromJson(v)
+lib/src/generated/model.dart:            ((v) => v != null ? MatrixEvent.fromJson(v) : null)(json['result']);
+lib/src/generated/model.dart:  ResultRoomEvents.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:                    .map((k, v) => MapEntry(k, GroupValue.fromJson(v)))))
+lib/src/generated/model.dart:            ? (v as List).map((v) => Result.fromJson(v)).toList()
+lib/src/generated/model.dart:                k, (v as List).map((v) => MatrixEvent.fromJson(v)).toList()))
+lib/src/generated/model.dart:  ResultCategories.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:      : roomEvents = ((v) => v != null ? ResultRoomEvents.fromJson(v) : null)(
+lib/src/generated/model.dart:  SearchResults.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:      : searchCategories = ResultCategories.fromJson(json['search_categories']);
+lib/src/generated/model.dart:  Location.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  FieldType.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  ProtocolInstance.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  Protocol.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:            .map((k, v) => MapEntry(k, FieldType.fromJson(v))),
+lib/src/generated/model.dart:            .map((v) => ProtocolInstance.fromJson(v))
+lib/src/generated/model.dart:  ThirdPartyUser.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  StateFilter.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  RoomFilter.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:            v != null ? StateFilter.fromJson(v) : null)(json['account_data']),
+lib/src/generated/model.dart:            v != null ? StateFilter.fromJson(v) : null)(json['ephemeral']),
+lib/src/generated/model.dart:            ((v) => v != null ? StateFilter.fromJson(v) : null)(json['state']),
+lib/src/generated/model.dart:            v != null ? StateFilter.fromJson(v) : null)(json['timeline']);
+lib/src/generated/model.dart:  Filter.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:            v != null ? EventFilter.fromJson(v) : null)(json['account_data']),
+lib/src/generated/model.dart:            v != null ? EventFilter.fromJson(v) : null)(json['presence']),
+lib/src/generated/model.dart:        room = ((v) => v != null ? RoomFilter.fromJson(v) : null)(json['room']);
+lib/src/generated/model.dart:  OpenIdCredentials.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  Tag.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  Profile.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  SearchUserDirectoryResponse.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:            (json['results'] as List).map((v) => Profile.fromJson(v)).toList();
+lib/src/generated/model.dart:  TurnServerCredentials.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  GetVersionsResponse.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  ServerConfig.fromJson(Map<String, dynamic> json)
+lib/src/generated/model.dart:  GetUrlPreviewResponse.fromJson(Map<String, dynamic> json)
+test/matrix_api_test.dart:      final exception = MatrixException.fromJson({
+test/matrix_api_test.dart:        auth: AuthenticationData.fromJson({
+test/matrix_api_test.dart:        auth: AuthenticationData.fromJson({
+test/matrix_api_test.dart:          auth: AuthenticationData.fromJson({'type': 'm.login.dummy'}));
+test/matrix_api_test.dart:      expect(filterMap, Filter.fromJson(filterMap).toJson());
+test/matrix_api_test.dart:      final masterKey = MatrixCrossSigningKey.fromJson({
+test/matrix_api_test.dart:      final selfSigningKey = MatrixCrossSigningKey.fromJson({
+test/matrix_api_test.dart:      final userSigningKey = MatrixCrossSigningKey.fromJson({
+test/matrix_api_test.dart:      final session = KeyBackupData.fromJson({
+test/matrix_api_test.dart:      final session = RoomKeyBackup.fromJson({
+test/matrix_api_test.dart:      final session = RoomKeys.fromJson({
+test/matrix_api_test.dart:      expect(AuthenticationData.fromJson(json).toJson(), json);
+test/matrix_api_test.dart:      expect(AuthenticationRecaptcha.fromJson(json).toJson(), json);
+test/matrix_api_test.dart:      expect(AuthenticationToken.fromJson(json).toJson(), json);
+test/matrix_api_test.dart:      expect(AuthenticationThreePidCreds.fromJson(json).toJson(), json);
+test/matrix_api_test.dart:      expect(AuthenticationIdentifier.fromJson(json).toJson(), json);
+test/matrix_api_test.dart:      expect(AuthenticationPassword.fromJson(json).toJson(), json);
+test/matrix_api_test.dart:      expect(AuthenticationPassword.fromJson(json).toJson(), json);
+test/matrix_api_test.dart:      expect(AuthenticationPassword.fromJson(json).toJson(), json);
+test/event_content_test.dart:      expect(MatrixEvent.fromJson(json!).parsedRoomEncryptionContent.toJson(),
+test/event_content_test.dart:      expect(MatrixEvent.fromJson(json!).parsedRoomEncryptedContent.toJson(),
+test/event_content_test.dart:      expect(MatrixEvent.fromJson(json!).parsedRoomEncryptedContent.toJson(),
+test/event_content_test.dart:      expect(BasicEvent.fromJson(json!).parsedRoomKeyContent.toJson(),
+test/event_content_test.dart:      expect(BasicEvent.fromJson(json!).parsedRoomKeyRequestContent.toJson(),
+test/event_content_test.dart:      expect(BasicEvent.fromJson(json!).parsedRoomKeyRequestContent.toJson(),
+test/event_content_test.dart:      expect(BasicEvent.fromJson(json!).parsedForwardedRoomKeyContent.toJson(),
+test/event_content_test.dart:      expect(OlmPlaintextPayload.fromJson(json!).toJson(), json);
+test/event_content_test.dart:      expect(BasicEvent.fromJson(json).parsedImagePackContent.toJson(),
+test/event_content_test.dart:          BasicEvent.fromJson(json)
+test/event_content_test.dart:          BasicEvent.fromJson(json)
+test/event_content_test.dart:      expect(BasicEvent.fromJson(json).parsedImagePackContent.images['emote'],

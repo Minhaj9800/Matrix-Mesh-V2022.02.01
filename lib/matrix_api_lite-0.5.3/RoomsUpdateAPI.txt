@@ -1,0 +1,7 @@
+lib/src/model/sync_update.dart:  RoomsUpdate? rooms;
+lib/src/model/sync_update.dart:            json['rooms'] != null ? RoomsUpdate.fromJson(json['rooms']) : null,
+lib/src/model/sync_update.dart:class RoomsUpdate {
+lib/src/model/sync_update.dart:  RoomsUpdate({
+lib/src/model/sync_update.dart:  RoomsUpdate.fromJson(Map<String, dynamic> json) {
+fromJSON_in_API.txt:lib/src/model/sync_update.dart:            json['rooms'] != null ? RoomsUpdate.fromJson(json['rooms']) : null,
+fromJSON_in_API.txt:lib/src/model/sync_update.dart:  RoomsUpdate.fromJson(Map<String, dynamic> json) {

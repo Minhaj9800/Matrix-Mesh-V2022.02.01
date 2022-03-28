@@ -1,0 +1,2 @@
+src/database/fluffybox_database.dart:class FluffyBoxDatabase extends DatabaseApi {
+src/database/fluffybox_database.dart:  FluffyBoxDatabase(this.name, this.path, {this.key});

@@ -1,0 +1,114 @@
+widget.dart:  factory MatrixWidget.fromJson(Map<String, dynamic> json, Room room) =>
+src/room.dart:  factory Room.fromJson(Map<String, dynamic> json, Client client) => Room(
+src/room.dart:            RoomSummary.fromJson(Map<String, dynamic>.from(json['summary'])),
+src/room.dart:            (e) => MatrixWidget.fromJson(e.content, this),
+src/room.dart:            RoomSummary.fromJson({
+src/room.dart:    return MarkedUnread.fromJson(
+src/client.dart:      return DiscoveryInformation.fromJson(rawJson);
+src/client.dart:    return pushrules != null ? PushRuleSet.fromJson(pushrules) : null;
+src/client.dart:    return pushrules != null ? PushRuleSet.fromJson(pushrules) : null;
+src/client.dart:      var toDeviceEvent = ToDeviceEvent.fromJson(event.toJson());
+src/client.dart:          onCallInvite.add(Event.fromJson(rawUnencryptedEvent, room));
+src/client.dart:          onCallHangup.add(Event.fromJson(rawUnencryptedEvent, room));
+src/client.dart:          onCallAnswer.add(Event.fromJson(rawUnencryptedEvent, room));
+src/client.dart:          onCallCandidates.add(Event.fromJson(rawUnencryptedEvent, room));
+src/client.dart:          onCallSelectAnswer.add(Event.fromJson(rawUnencryptedEvent, room));
+src/client.dart:          onCallReject.add(Event.fromJson(rawUnencryptedEvent, room));
+src/client.dart:          onCallNegotiate.add(Event.fromJson(rawUnencryptedEvent, room));
+src/client.dart:          onCallReplaces.add(Event.fromJson(rawUnencryptedEvent, room));
+src/client.dart:              .add(Event.fromJson(rawUnencryptedEvent, room));
+src/client.dart:              .add(Event.fromJson(rawUnencryptedEvent, room));
+src/client.dart:        rooms[roomIndex].summary = RoomSummary.fromJson(roomSummaryJson);
+src/client.dart:        final stateEvent = Event.fromJson(eventUpdate.content, room);
+src/client.dart:            BasicRoomEvent.fromJson(eventUpdate.content);
+src/client.dart:            BasicRoomEvent.fromJson(eventUpdate.content);
+src/voip_content.dart:  factory CallReplacesTarget.fromJson(Map<String, dynamic> json) =>
+src/voip_content.dart:  factory CallReplaces.fromJson(Map<String, dynamic> json) => CallReplaces(
+src/voip_content.dart:        target_user: CallReplacesTarget.fromJson(json['target_user']),
+src/voip_content.dart:  factory CallCapabilities.fromJson(Map<String, dynamic> json) =>
+src/voip_content.dart:  factory SDPStreamPurpose.fromJson(Map<String, dynamic> json) =>
+src/voip_content.dart:  factory SDPStreamMetadata.fromJson(Map<String, dynamic> json) =>
+src/voip_content.dart:          (key, value) => MapEntry(key, SDPStreamPurpose.fromJson(value))));
+src/voip_content.dart:  factory AssertedIdentity.fromJson(Map<String, dynamic> json) =>
+src/utils/queued_to_device_event.dart:  factory QueuedToDeviceEvent.fromJson(Map<String, dynamic> json) =>
+src/utils/marked_unread.dart:  MarkedUnread.fromJson(Map<String, dynamic> json)
+src/utils/to_device_event.dart:  factory ToDeviceEvent.fromJson(Map<String, dynamic> json) {
+src/utils/to_device_event.dart:    final event = BasicEventWithSender.fromJson(json);
+src/utils/event_update.dart:          room.id, Event.fromJson(content, room),
+src/utils/device_keys_list.dart:  SimpleSignableKey.fromJson(Map<String, dynamic> json) : super.fromJson(json);
+src/utils/device_keys_list.dart:  SignableKey.fromJson(Map<String, dynamic> json, Client cl)
+src/utils/device_keys_list.dart:        super.fromJson(json) {
+src/utils/device_keys_list.dart:    final newKey = SimpleSignableKey.fromJson(toJson().copy());
+src/utils/device_keys_list.dart:      : super.fromJson(k.toJson().copy(), cl) {
+src/utils/device_keys_list.dart:      : super.fromJson(Event.getMapFromPayload(dbEntry['content']), cl) {
+src/utils/device_keys_list.dart:  CrossSigningKey.fromJson(Map<String, dynamic> json, Client cl)
+src/utils/device_keys_list.dart:      : super.fromJson(json.copy(), cl) {
+src/utils/device_keys_list.dart:      : super.fromJson(k.toJson().copy(), cl) {
+src/utils/device_keys_list.dart:      : super.fromJson(Event.getMapFromPayload(dbEntry['content']), cl) {
+src/utils/device_keys_list.dart:  DeviceKeys.fromJson(Map<String, dynamic> json, Client cl)
+src/utils/device_keys_list.dart:      : super.fromJson(json.copy(), cl) {
+src/utils/image_pack_extension.dart:                () => ImagePackContent.fromJson({})
+src/timeline.dart:          events[index].setRedactionEvent(Event.fromJson(
+src/timeline.dart:          events[i] = Event.fromJson(
+src/timeline.dart:          final newEvent = Event.fromJson(
+src/database/fluffybox_database.dart:    return Event.fromJson(copyMap(raw), room);
+src/database/fluffybox_database.dart:        .map((rawEvent) => Event.fromJson(copyMap(rawEvent!), room))
+src/database/fluffybox_database.dart:    return StoredInboundGroupSession.fromJson(copyMap(raw));
+src/database/fluffybox_database.dart:          (json) => StoredInboundGroupSession.fromJson(
+src/database/fluffybox_database.dart:        .map((json) => OlmSession.fromJson(copyMap(json), userId))
+src/database/fluffybox_database.dart:    return OutboundGroupSession.fromJson(copyMap(raw), userId);
+src/database/fluffybox_database.dart:          final room = Room.fromJson(copyMap(raw), client);
+src/database/fluffybox_database.dart:                  .map((raw) => Event.fromJson(copyMap(raw), room))
+src/database/fluffybox_database.dart:              room.setState(Event.fromJson(copyMap(member), room));
+src/database/fluffybox_database.dart:          final basicRoomEvent = BasicRoomEvent.fromJson(
+src/database/fluffybox_database.dart:    return SSSSCache.fromJson(copyMap(raw));
+src/database/fluffybox_database.dart:    return copiedRaws.map((raw) => QueuedToDeviceEvent.fromJson(raw)).toList();
+src/database/fluffybox_database.dart:          states.values.map((raw) => Event.fromJson(copyMap(raw), room)));
+src/database/fluffybox_database.dart:    return Event.fromJson(copyMap(state), room).asUser;
+src/database/fluffybox_database.dart:      (state) => users.add(Event.fromJson(copyMap(state!), room).asUser),
+src/database/fluffybox_database.dart:    final room = Room.fromJson(copyMap(raw), client);
+src/database/fluffybox_database.dart:        event.setRedactionEvent(Event.fromJson(eventUpdate.content, tmpRoom));
+src/database/fluffybox_database.dart:              : Event.fromJson(stateMap[''] as Map<String, dynamic>, tmpRoom);
+src/database/fluffybox_database.dart:      final currentRoom = Room.fromJson(copyMap(currentRawRoom), client);
+src/database/fluffybox_database.dart:            summary: RoomSummary.fromJson(currentRoom.summary.toJson()
+src/database/fluffybox_database.dart:        .map((raw) => StoredInboundGroupSession.fromJson(copyMap(raw)))
+src/database/hive_database.dart:          final deviceKeys = DeviceKeys.fromJson(
+src/database/hive_database.dart:    return Event.fromJson(convertToJson(raw), room);
+src/database/hive_database.dart:            (eventId) async => Event.fromJson(
+src/database/hive_database.dart:    return StoredInboundGroupSession.fromJson(convertToJson(raw));
+src/database/hive_database.dart:          (json) => StoredInboundGroupSession.fromJson(
+src/database/hive_database.dart:        .map((json) => OlmSession.fromJson(convertToJson(json), userId))
+src/database/hive_database.dart:    return OutboundGroupSession.fromJson(convertToJson(raw), userId);
+src/database/hive_database.dart:          final room = Room.fromJson(convertToJson(raw), client);
+src/database/hive_database.dart:            room.setState(Event.fromJson(convertToJson(state), room));
+src/database/hive_database.dart:                .map((raw) => Event.fromJson(convertToJson(raw), room))
+src/database/hive_database.dart:            final basicRoomEvent = BasicRoomEvent.fromJson(
+src/database/hive_database.dart:    return SSSSCache.fromJson(convertToJson(raw));
+src/database/hive_database.dart:        return QueuedToDeviceEvent.fromJson(convertToJson(raw));
+src/database/hive_database.dart:          states.values.map((raw) => Event.fromJson(convertToJson(raw), room)));
+src/database/hive_database.dart:    return Event.fromJson(convertToJson(state), room).asUser;
+src/database/hive_database.dart:      users.add(Event.fromJson(convertToJson(state), room).asUser);
+src/database/hive_database.dart:    final room = Room.fromJson(convertToJson(raw), client);
+src/database/hive_database.dart:        event.setRedactionEvent(Event.fromJson(eventUpdate.content, tmpRoom));
+src/database/hive_database.dart:      final currentRoom = Room.fromJson(convertToJson(currentRawRoom), client);
+src/database/hive_database.dart:            summary: RoomSummary.fromJson(currentRoom.summary.toJson()
+src/database/hive_database.dart:        .map((raw) => StoredInboundGroupSession.fromJson(convertToJson(raw)))
+src/event.dart:        ? Event.fromJson(redacted_because, room)
+src/event.dart:                    events: [MatrixEvent.fromJson(json)],
+src/event.dart:  factory Event.fromJson(
+src/event.dart:        return Event.fromJson(rawEvent, room);
+src/voip.dart:          CallCapabilities.fromJson(event.content['capabilities']);
+src/voip.dart:          SDPStreamMetadata.fromJson(event.content[sdpStreamMetadataKey]);
+src/voip.dart:            SDPStreamMetadata.fromJson(event.content[sdpStreamMetadataKey]);
+src/voip.dart:          SDPStreamMetadata.fromJson(event.content[sdpStreamMetadataKey]));
+src/voip.dart:          AssertedIdentity.fromJson(event.content['asserted_identity']));
+src/voip.dart:              SDPStreamMetadata.fromJson(event.content[sdpStreamMetadataKey]);
+encryption/utils/outbound_group_session.dart:  OutboundGroupSession.fromJson(Map<String, dynamic> dbEntry, String key)
+encryption/utils/bootstrap.dart:          masterKey = MatrixCrossSigningKey.fromJson(json);
+encryption/utils/bootstrap.dart:          selfSigningKey = MatrixCrossSigningKey.fromJson(json);
+encryption/utils/bootstrap.dart:          userSigningKey = MatrixCrossSigningKey.fromJson(json);
+encryption/utils/ssss_cache.dart:  factory SSSSCache.fromJson(Map<String, dynamic> json) => SSSSCache(
+encryption/utils/stored_inbound_group_session.dart:  factory StoredInboundGroupSession.fromJson(Map<String, dynamic> json) =>
+encryption/utils/olm_session.dart:  OlmSession.fromJson(Map<String, dynamic> dbEntry, String key)
+encryption/olm_manager.dart:            ? MatrixDeviceKeys.fromJson(keysContent['device_keys'])
+encryption/key_manager.dart:    final keys = RoomKeys.fromJson({

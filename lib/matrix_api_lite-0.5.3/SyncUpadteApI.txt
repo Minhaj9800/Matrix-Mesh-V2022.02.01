@@ -1,0 +1,18 @@
+lib/src/model/sync_update.dart:class SyncUpdate {
+lib/src/model/sync_update.dart:  SyncUpdate({
+lib/src/model/sync_update.dart:  SyncUpdate.fromJson(Map<String, dynamic> json)
+lib/src/generated/api.dart:  Future<EventsSyncUpdate> getEvents({String? from, int? timeout}) async {
+lib/src/generated/api.dart:    return EventsSyncUpdate.fromJson(json);
+lib/src/generated/api.dart:  Future<EventsSyncUpdate> peekEvents(
+lib/src/generated/api.dart:    return EventsSyncUpdate.fromJson(json);
+lib/src/generated/api.dart:  Future<SyncUpdate> sync(
+lib/src/generated/api.dart:    return SyncUpdate.fromJson(json);
+lib/src/generated/model.dart:class EventsSyncUpdate {
+lib/src/generated/model.dart:  EventsSyncUpdate({
+lib/src/generated/model.dart:  EventsSyncUpdate.fromJson(Map<String, dynamic> json)
+CHANGELOG.md:- feat: Add constructors to SyncUpdate classes
+fromJSON_in_API.txt:lib/src/model/sync_update.dart:  SyncUpdate.fromJson(Map<String, dynamic> json)
+fromJSON_in_API.txt:lib/src/generated/api.dart:    return EventsSyncUpdate.fromJson(json);
+fromJSON_in_API.txt:lib/src/generated/api.dart:    return EventsSyncUpdate.fromJson(json);
+fromJSON_in_API.txt:lib/src/generated/api.dart:    return SyncUpdate.fromJson(json);
+fromJSON_in_API.txt:lib/src/generated/model.dart:  EventsSyncUpdate.fromJson(Map<String, dynamic> json)

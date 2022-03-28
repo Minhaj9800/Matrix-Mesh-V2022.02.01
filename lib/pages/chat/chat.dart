@@ -139,6 +139,7 @@ class ChatController extends State<Chat> {
     await launch(url);
   }
 
+  /// Storing the message after recived (Possibly)
   void requestHistory() async {
     if (canLoadMore) {
       try {

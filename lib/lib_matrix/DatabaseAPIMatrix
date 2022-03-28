@@ -1,0 +1,10 @@
+src/client.dart:  final FutureOr<DatabaseApi> Function(Client)? databaseBuilder;
+src/client.dart:  final FutureOr<DatabaseApi> Function(Client)? legacyDatabaseBuilder;
+src/client.dart:  DatabaseApi? _database;
+src/client.dart:  DatabaseApi? get database => _database;
+src/client.dart:        _database ??= await runBenchmarked<DatabaseApi>(
+src/database/fluffybox_database.dart:class FluffyBoxDatabase extends DatabaseApi {
+src/database/hive_database.dart:class FamedlySdkHiveDatabase extends DatabaseApi {
+src/database/database_api.dart:abstract class DatabaseApi {
+FamedlySdkHiveDBMatrix.txt:src/database/hive_database.dart:class FamedlySdkHiveDatabase extends DatabaseApi {
+FluffyBoxDatabaseMatrix.txt:src/database/fluffybox_database.dart:class FluffyBoxDatabase extends DatabaseApi {

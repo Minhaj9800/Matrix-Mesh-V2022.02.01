@@ -1,0 +1,5 @@
+src/room.dart:        rooms: RoomsUpdate(
+src/room.dart:      rooms: RoomsUpdate(
+src/room.dart:            rooms: RoomsUpdate(
+src/room.dart:            rooms: RoomsUpdate(
+src/event.dart:            rooms: RoomsUpdate(
