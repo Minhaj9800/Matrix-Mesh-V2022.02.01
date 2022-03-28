@@ -1,0 +1,50 @@
+include: package:pedantic/analysis_options.yaml
+
+linter:
+  rules:
+    - camel_case_types
+    - avoid_print
+    - constant_identifier_names
+    - prefer_final_locals
+    - prefer_final_in_for_each
+
+analyzer:
+  errors:
+    todo: ignore
+  exclude:
+    - example/main.dart
+    # needed until crypto packages upgrade
+    - lib/src/database/database.g.dart
+  plugins:
+    # Show code metrics in IDE
+    # - dart_code_metrics
+
+dart_code_metrics:
+  metrics:
+    cyclomatic-complexity: 20
+    number-of-arguments: 4
+    maximum-nesting-level: 5
+    source-lines-of-code: 50
+    # This is still unstable, so handle with care
+    maintainability-index: 40
+  metrics-exclude:
+    - test/**
+  rules:
+    #- newline-before-return
+    - no-boolean-literal-compare
+    - no-empty-block
+    #- prefer-trailing-comma
+    - prefer-conditional-expressions
+    - no-equal-arguments
+    - no-equal-then-else
+    - no-magic-number:
+        severity: style # too noisy otherwise atm
+    - avoid-late-keyword:
+        severity: style # too noisy otherwise atm
+    - avoid-non-null-assertion:
+        severity: style # too noisy otherwise atm
+    - avoid-unused-parameters
+    - binary-expression-operand-order
+  anti-patterns:
+    - long-method
+    - long-parameter-list

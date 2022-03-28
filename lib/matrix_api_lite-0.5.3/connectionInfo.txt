@@ -1,7 +1,0 @@
-lib/src/generated/model.dart:class ConnectionInfo {
-lib/src/generated/model.dart:  ConnectionInfo({
-lib/src/generated/model.dart:  ConnectionInfo.fromJson(Map<String, dynamic> json)
-lib/src/generated/model.dart:            ? (v as List).map((v) => ConnectionInfo.fromJson(v)).toList()
-lib/src/generated/model.dart:  List<ConnectionInfo>? connections;
-fromJSON_in_API.txt:lib/src/generated/model.dart:  ConnectionInfo.fromJson(Map<String, dynamic> json)
-fromJSON_in_API.txt:lib/src/generated/model.dart:            ? (v as List).map((v) => ConnectionInfo.fromJson(v)).toList()

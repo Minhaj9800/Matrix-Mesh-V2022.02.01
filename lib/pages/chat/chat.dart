@@ -12,7 +12,14 @@ import 'package:file_picker_cross/file_picker_cross.dart';
 import 'package:flutter_gen/gen_l10n/l10n.dart';
 import 'package:future_loading_dialog/future_loading_dialog.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:matrix/matrix.dart';
+//import 'package:matrix/matrix.dart';
+
+// Adding our version of matrix
+import 'package:fluffychat/lib_matrix/matrix.dart';
+import 'package:fluffychat/lib_matrix/src/room.dart';
+//import 'package:fluffychat/lib_matrix/src/'
+//import 'package:fluffychat/lib_matrix/src/';
+
 import 'package:record/record.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -22,6 +29,7 @@ import 'package:fluffychat/config/app_config.dart';
 import 'package:fluffychat/pages/chat/chat_view.dart';
 import 'package:fluffychat/pages/chat/cupertino_widgets_bottom_sheet.dart';
 import 'package:fluffychat/pages/chat/event_info_dialog.dart';
+// Adding the package of fluffy chat
 import 'package:fluffychat/pages/chat/recording_dialog.dart';
 import 'package:fluffychat/pages/chat/widgets_bottom_sheet.dart';
 import 'package:fluffychat/utils/matrix_sdk_extensions.dart/event_extension.dart';
