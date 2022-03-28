@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:fluffychat/lib_matrix/matrix.dart';
+import 'package:fluffychat/matrix/lib/matrix.dart';
 
 abstract class AppConfig {
   static String _applicationName = 'FluffyChat';
