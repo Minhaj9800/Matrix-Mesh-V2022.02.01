@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:matrix/matrix.dart';
+import 'package:fluffychat/matrix/lib/matrix.dart';
 
 import 'package:fluffychat/config/themes.dart';
 import 'package:fluffychat/utils/date_time_extension.dart';

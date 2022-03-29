@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/l10n.dart';
 import 'package:future_loading_dialog/future_loading_dialog.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:matrix/matrix.dart';
+import 'package:fluffychat/matrix/lib/matrix.dart';
 
 import 'package:fluffychat/pages/chat/events/map_bubble.dart';
 import 'package:fluffychat/utils/platform_infos.dart';

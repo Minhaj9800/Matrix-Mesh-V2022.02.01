@@ -17,11 +17,11 @@
  */
 
 import 'dart:convert';
-import 'package:matrix/matrix.dart';
+import '../../lib/matrix.dart';
 
 import 'package:test/test.dart';
 import 'package:olm/olm.dart' as olm;
-import 'package:matrix/encryption/utils/json_signature_check_extension.dart';
+import '../../lib/encryption/utils/json_signature_check_extension.dart';
 
 import '../fake_client.dart';
 import '../fake_matrix_api.dart';

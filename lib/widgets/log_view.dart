@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:matrix/matrix.dart';
+import 'package:fluffychat/matrix/lib/matrix.dart';
 
 class LogViewer extends StatefulWidget {
   const LogViewer({Key? key}) : super(key: key);

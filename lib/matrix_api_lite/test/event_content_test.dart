@@ -23,7 +23,7 @@
 
 import 'dart:convert';
 
-import 'package:matrix_api_lite/matrix_api_lite.dart';
+import '../lib/matrix_api_lite.dart';
 import 'package:test/test.dart';
 
 void main() {

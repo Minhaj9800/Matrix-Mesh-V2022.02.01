@@ -16,8 +16,8 @@
  *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import 'package:matrix/encryption/utils/stored_inbound_group_session.dart';
-import 'package:matrix_api_lite/src/utils/filter_map_extension.dart';
+import 'stored_inbound_group_session.dart';
+import 'package:fluffychat/matrix_api_lite/lib/src/utils/filter_map_extension.dart';
 import 'package:olm/olm.dart' as olm;
 
 import '../../matrix.dart';

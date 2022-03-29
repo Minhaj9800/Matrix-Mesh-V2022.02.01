@@ -22,7 +22,7 @@ For flutter apps you can easily import it with the [flutter_olm](https://pub.dev
 ```
 
 ```dart
-import 'package:matrix/matrix.dart';
+import '../../matrix.dart';
 ```
 
 2. Create a new client:

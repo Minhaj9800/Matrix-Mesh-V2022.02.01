@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:matrix/matrix.dart';
+import 'package:fluffychat/matrix/lib/matrix.dart';
 
 IconData _getIconFromName(String displayname) {
   final name = displayname.toLowerCase();

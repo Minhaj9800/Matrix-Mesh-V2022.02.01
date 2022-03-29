@@ -20,7 +20,7 @@ import 'dart:convert';
 
 import 'package:canonical_json/canonical_json.dart';
 import 'package:collection/collection.dart' show IterableExtension;
-import 'package:matrix/matrix.dart';
+import '../../matrix.dart';
 import 'package:olm/olm.dart' as olm;
 
 import '../../encryption.dart';

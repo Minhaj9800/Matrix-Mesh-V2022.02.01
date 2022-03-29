@@ -16,7 +16,7 @@
  *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import 'package:matrix/matrix.dart';
+import '../lib/matrix.dart';
 
 import 'fake_matrix_api.dart';
 import 'fake_database.dart';

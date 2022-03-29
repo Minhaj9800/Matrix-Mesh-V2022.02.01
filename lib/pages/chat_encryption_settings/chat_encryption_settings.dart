@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:matrix/encryption.dart';
-import 'package:matrix/matrix.dart';
+import 'package:fluffychat/matrix/lib/encryption.dart';
+import 'package:fluffychat/matrix/lib/matrix.dart';
 import 'package:vrouter/vrouter.dart';
 
 import 'package:fluffychat/pages/chat_encryption_settings/chat_encryption_settings_view.dart';

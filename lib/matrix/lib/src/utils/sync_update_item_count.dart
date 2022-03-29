@@ -1,4 +1,4 @@
-import 'package:matrix/matrix.dart';
+import '../../matrix.dart';
 
 extension SyncUpdateItemCount on SyncUpdate {
   int get itemCount {

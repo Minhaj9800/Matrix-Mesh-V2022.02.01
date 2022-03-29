@@ -15,7 +15,7 @@
  *   You should have received a copy of the GNU Affero General Public License
  *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-import 'package:matrix/matrix.dart';
+import '../lib/matrix.dart';
 import '../test/fake_database.dart';
 import 'test_config.dart';
 import 'package:olm/olm.dart' as olm;

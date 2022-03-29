@@ -16,7 +16,7 @@
  *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import 'package:matrix_api_lite/matrix_api_lite.dart';
+import 'package:fluffychat/matrix_api_lite/lib/matrix_api_lite.dart';
 
 import '../event.dart';
 

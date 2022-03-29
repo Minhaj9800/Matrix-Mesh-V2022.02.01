@@ -10,7 +10,7 @@ Matrix SDK.
 A simple usage example:
 
 ```dart
-import 'package:matrix_api_lite/src/matrix_api.dart';
+import 'matrix_api.dart';
 
 void main() async {
   final api = MatrixApi(homeserver: Uri.parse('https://matrix.org'));

@@ -2,11 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 
-//Adding our version of matrix
-import 'package:fluffychat/lib_matrix/matrix.dart';
-//import 'package:fluffychat/lib_matrix/src/event.dart';
+
 import 'package:flutter_gen/gen_l10n/l10n.dart';
-//import 'package:matrix/matrix.dart';
+import 'package:fluffychat/matrix/lib/matrix.dart';
 
 import 'package:fluffychat/config/app_config.dart';
 import 'package:fluffychat/utils/date_time_extension.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_gen/gen_l10n/l10n.dart';
-import 'package:matrix/matrix.dart';
+import 'package:fluffychat/matrix/lib/matrix.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 import 'package:fluffychat/pages/new_private_chat/new_private_chat_view.dart';

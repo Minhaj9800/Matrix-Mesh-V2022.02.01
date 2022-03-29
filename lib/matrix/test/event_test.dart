@@ -19,8 +19,8 @@
 import 'dart:convert';
 import 'dart:typed_data';
 
-import 'package:matrix/encryption.dart';
-import 'package:matrix/matrix.dart';
+import '../lib/encryption.dart';
+import '../lib/matrix.dart';
 import 'package:olm/olm.dart' as olm;
 import 'package:test/test.dart';
 

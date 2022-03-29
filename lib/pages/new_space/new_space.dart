@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:future_loading_dialog/future_loading_dialog.dart';
-import 'package:matrix/matrix.dart' as sdk;
-import 'package:matrix/matrix.dart';
+import 'package:fluffychat/matrix/lib/matrix.dart' as sdk;
+import 'package:fluffychat/matrix/lib/matrix.dart';
 import 'package:vrouter/vrouter.dart';
 
 import 'package:fluffychat/pages/new_space/new_space_view.dart';

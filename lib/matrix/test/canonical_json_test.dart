@@ -17,7 +17,7 @@
  */
 
 import 'package:canonical_json/canonical_json.dart';
-import 'package:matrix/matrix.dart';
+import '../lib/matrix.dart';
 import 'package:test/test.dart';
 
 void main() {

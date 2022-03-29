@@ -18,8 +18,8 @@
 
 import 'dart:convert';
 
-import 'package:matrix/encryption/utils/base64_unpadded.dart';
-import 'package:matrix/encryption/utils/stored_inbound_group_session.dart';
+import '../encryption/utils/base64_unpadded.dart';
+import '../encryption/utils/stored_inbound_group_session.dart';
 import 'package:olm/olm.dart' as olm;
 import 'package:collection/collection.dart';
 

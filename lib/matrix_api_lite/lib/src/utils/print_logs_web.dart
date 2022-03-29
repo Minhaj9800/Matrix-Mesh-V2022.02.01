@@ -1,4 +1,4 @@
-import 'package:matrix_api_lite/matrix_api_lite.dart';
+import '../../matrix_api_lite.dart';
 import 'dart:html';
 
 extension PrintLogs on LogEvent {

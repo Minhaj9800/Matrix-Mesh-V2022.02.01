@@ -23,13 +23,13 @@ import 'dart:typed_data';
 
 import 'package:fluffybox/fluffybox.dart';
 import 'package:fluffybox/hive.dart' show HiveCipher;
-import 'package:matrix/encryption/utils/olm_session.dart';
-import 'package:matrix/encryption/utils/outbound_group_session.dart';
-import 'package:matrix/encryption/utils/ssss_cache.dart';
-import 'package:matrix/encryption/utils/stored_inbound_group_session.dart';
-import 'package:matrix/matrix.dart';
-import 'package:matrix/src/utils/queued_to_device_event.dart';
-import 'package:matrix/src/utils/run_benchmarked.dart';
+import '../../encryption/utils/olm_session.dart';
+import '../../encryption/utils/outbound_group_session.dart';
+import '../../encryption/utils/ssss_cache.dart';
+import '../../encryption/utils/stored_inbound_group_session.dart';
+import '../../matrix.dart';
+import '../../src/utils/queued_to_device_event.dart';
+import '../../src/utils/run_benchmarked.dart';
 
 /// This database does not support file caching!
 class FluffyBoxDatabase extends DatabaseApi {

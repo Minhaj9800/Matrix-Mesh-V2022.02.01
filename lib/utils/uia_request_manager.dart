@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:adaptive_dialog/adaptive_dialog.dart';
 import 'package:flutter_gen/gen_l10n/l10n.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
-import 'package:matrix/matrix.dart';
+import 'package:fluffychat/matrix/lib/matrix.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'package:fluffychat/utils/platform_infos.dart';

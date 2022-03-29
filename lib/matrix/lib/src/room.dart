@@ -22,9 +22,9 @@ import 'dart:typed_data';
 
 import 'package:collection/collection.dart';
 import 'package:html_unescape/html_unescape.dart';
-import 'package:matrix/src/utils/crypto/crypto.dart';
-import 'package:matrix/src/utils/space_child.dart';
-import 'package:matrix/widget.dart';
+import '../src/utils/crypto/crypto.dart';
+import '../src/utils/space_child.dart';
+import '../widget.dart';
 
 import '../matrix.dart';
 import 'utils/markdown.dart';

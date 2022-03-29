@@ -16,7 +16,7 @@
  *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import 'package:matrix/src/utils/html_to_text.dart';
+import '../lib/src/utils/html_to_text.dart';
 import 'package:test/test.dart';
 
 void main() {

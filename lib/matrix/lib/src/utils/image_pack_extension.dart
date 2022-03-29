@@ -17,7 +17,7 @@
  */
 
 import 'package:slugify/slugify.dart';
-import 'package:matrix_api_lite/matrix_api_lite.dart';
+import 'package:fluffychat/matrix_api_lite/lib/matrix_api_lite.dart';
 
 import '../room.dart';
 

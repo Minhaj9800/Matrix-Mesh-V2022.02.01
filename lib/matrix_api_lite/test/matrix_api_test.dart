@@ -23,8 +23,8 @@
 
 import 'dart:typed_data';
 
-import 'package:matrix_api_lite/fake_matrix_api.dart';
-import 'package:matrix_api_lite/matrix_api_lite.dart';
+import '../lib/fake_matrix_api.dart';
+import '../lib/matrix_api_lite.dart';
 import 'package:test/test.dart';
 
 void main() {

@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 
 import 'package:flutter_blurhash/flutter_blurhash.dart';
 import 'package:flutter_gen/gen_l10n/l10n.dart';
-import 'package:matrix/matrix.dart';
+import 'package:fluffychat/matrix/lib/matrix.dart';
 import 'package:matrix_link_text/link_text.dart';
 import 'package:video_player/video_player.dart';
 

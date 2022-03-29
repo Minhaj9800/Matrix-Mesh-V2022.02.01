@@ -18,7 +18,7 @@
 
 import 'dart:async';
 
-import 'package:matrix/matrix.dart';
+import '../lib/matrix.dart';
 
 import 'package:test/test.dart';
 

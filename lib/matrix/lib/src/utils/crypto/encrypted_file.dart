@@ -18,7 +18,7 @@
 import 'dart:typed_data';
 import 'dart:convert';
 
-import 'package:matrix/encryption/utils/base64_unpadded.dart';
+import '../../../encryption/utils/base64_unpadded.dart';
 
 import 'crypto.dart';
 

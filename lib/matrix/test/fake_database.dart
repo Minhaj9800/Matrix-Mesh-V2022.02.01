@@ -19,7 +19,7 @@
 import 'dart:io';
 import 'dart:math';
 
-import 'package:matrix/matrix.dart';
+import '../lib/matrix.dart';
 import 'package:file/memory.dart';
 import 'package:hive/hive.dart';
 

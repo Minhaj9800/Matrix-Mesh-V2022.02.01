@@ -19,8 +19,8 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:matrix/matrix.dart';
-import 'package:matrix/encryption.dart';
+import '../../lib/matrix.dart';
+import '../../lib/encryption.dart';
 
 import 'package:test/test.dart';
 import 'package:olm/olm.dart' as olm;

@@ -18,11 +18,11 @@
 
 import 'dart:typed_data';
 
-import 'package:matrix/encryption/utils/olm_session.dart';
-import 'package:matrix/encryption/utils/outbound_group_session.dart';
-import 'package:matrix/encryption/utils/ssss_cache.dart';
-import 'package:matrix/encryption/utils/stored_inbound_group_session.dart';
-import 'package:matrix/src/utils/queued_to_device_event.dart';
+import '../../encryption/utils/olm_session.dart';
+import '../../encryption/utils/outbound_group_session.dart';
+import '../../encryption/utils/ssss_cache.dart';
+import '../../encryption/utils/stored_inbound_group_session.dart';
+import '../../src/utils/queued_to_device_event.dart';
 
 import '../../matrix.dart';
 

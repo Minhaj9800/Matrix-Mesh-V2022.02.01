@@ -22,8 +22,8 @@ import 'dart:core';
 import 'dart:typed_data';
 
 import 'package:http/http.dart' as http;
-import 'package:matrix/src/utils/run_in_root.dart';
-import 'package:matrix/src/utils/sync_update_item_count.dart';
+import '../src/utils/run_in_root.dart';
+import '../src/utils/sync_update_item_count.dart';
 import 'package:mime/mime.dart';
 import 'package:olm/olm.dart' as olm;
 import 'package:collection/collection.dart' show IterableExtension;

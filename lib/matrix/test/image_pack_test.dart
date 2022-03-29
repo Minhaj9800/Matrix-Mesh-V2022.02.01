@@ -17,7 +17,7 @@
  */
 
 import 'package:test/test.dart';
-import 'package:matrix/matrix.dart';
+import '../lib/matrix.dart';
 import 'fake_client.dart';
 
 void main() {

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
 import 'package:adaptive_dialog/adaptive_dialog.dart';
-import 'package:matrix/matrix.dart';
+import 'package:fluffychat/matrix/lib/matrix.dart';
 
 extension ClientStoriesExtension on Client {
   static const String storiesRoomType = 'msc3588.stories.stories-room';

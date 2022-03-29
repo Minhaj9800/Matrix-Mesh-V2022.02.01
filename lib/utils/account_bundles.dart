@@ -1,4 +1,4 @@
-import 'package:matrix/matrix.dart';
+import 'package:fluffychat/matrix/lib/matrix.dart';
 
 class AccountBundles {
   String? prefix;

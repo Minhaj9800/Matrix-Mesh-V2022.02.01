@@ -16,7 +16,7 @@
  *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import 'package:matrix/src/utils/multilock.dart';
+import '../lib/src/utils/multilock.dart';
 import 'package:test/test.dart';
 
 void main() {

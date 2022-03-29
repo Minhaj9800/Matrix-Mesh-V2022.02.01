@@ -1,4 +1,4 @@
-import 'package:matrix/matrix.dart';
+import 'package:fluffychat/matrix/lib/matrix.dart';
 
 import '../../config/app_config.dart';
 
