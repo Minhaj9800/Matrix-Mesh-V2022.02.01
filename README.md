@@ -25,9 +25,3 @@
 - End to end encryption
 - Emoji verification & cross signing
 - And much more...
-
-# Installation
-
-Please visit our website for installation instructions:
-
-https://fluffychat.im
