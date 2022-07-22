@@ -10,6 +10,6 @@ FluffyChat is an open source, nonprofit and cute matrix messenger app. The app i
 <div>
   <h1 align="center">Matrix-Mesh Communication Protocol</h1>
   <span style = "color:blue">
-  <p align="center">A Proof of Concept,built on the top of FluffyChat which extends Matrix Protocol.</p></span>
+  <p align="center">A Proof of concept mobile application.</p></span>
  
 <div>
